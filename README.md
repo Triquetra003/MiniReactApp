@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+Introduction
+    This project is a simple React application that demonstrates the use of React Router for navigation and state management with hooks. It includes a React Trivia page and a To-Do List page.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+    Home Page:
+        - Links to the Trivia and To-Do List pages.
+    Trivia Page:
+        - A trivia is based on knowledge regarding react and it's concepts.
+        - When user selects an option, they are shown whether selected option is correct and if not, then point towards to the correct answer.
+        - Two buttons previous and next help in navigation or skip questions .
+        - A count-down is started as soon as the questions are displayed it is displayed at quiz level and the total time left is displayed to the user.
+        - At the end of the trivia, score of the user (which is number of correct answers attempted) is displayed along with entire solution with explanation.  
+        - How to Use: 
+            -Time Left will be displayed on top right as soon as you start the quiz and the answers once attempted cannot be changed.
+            -Scoring: Each correct answer earns you 1 point.
+            -Question Types: The quiz includes multiple-choice questions.
+            -Navigation: Once you start the Quiz, you cannot navigate to other pages in which case the questions you have attempted will not be considered and the Quiz will be restarted. You can however navigate through questions.
+            -Submission: Once you submit the quiz, you will receive your total score along with explanations for each question.
+            -Retakes: You can retake the quiz as many times as you like to improve your score and understanding.
+    To-Do List Page: 
+        - Users can create multiple Lists for multiple tasks in each List.
+        - New tasks can be either added in unique lists, deleted from the list or checked to be marked as completed
+        - Maximum of 6 lists can be created and each list can contain a maximum of 10 tasks.
+        - How to Use:
+            - Enter a valid and unique List Name in input field and click on the add (+) icon.
+            - This will display a Modal pop-up containing List Name and input field, a close and a save buttons.
+            - Enter a valid task name in input field and click on the add (+) icon.
+            - This will display the task in task-list below the input field along with two functionalities:
+                - delete task : Click on the trash icon beside the task you wish to delete. This will delete entire task whether it has been completed or not.
+                - check task : Click on the checkbox field beside the task. This will strike-through the task instead of removing it from the list marking it as completed, also allows you to un-check incompleted tasks later on.
+            - Close : close button at the bottom most section of the modal will close the task-list without saving any tasks or data.
+            - Save : save changes button beside the close button on bottom most section of task list modal will save all changes added or made in the list since its creation.
+            - Display : Once saved, the list will be displayed on the to-do list page with List name, task list along with checked tasks being striked through and the date & time of saving.
+    Future Enhancements:
+        - Edit task functionality  
+        - Edit list functionality
+        - Dark-mode toggle 
 
-## Available Scripts
+Installation:
+    To get started with this project, follow these steps:
+    # Clone the repository:
+    git clone https://github.com/Triquetra003/MiniReactApp.git
+    cd MiniReactApp
+    # Install dependencies:
+    npm install
+    # Start the development server:
+    npm start
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributing:
+- Contributions are welcome! Please follow these steps to contribute:
+    Fork the repository.
+    Create a new branch (git checkout -b feature-branch).
+    Make your changes.
+    Commit your changes (git commit -m 'Add some feature').
+    Push to the branch (git push origin feature-branch).
+    Open a pull request.
+- License:
+    This project is licensed under the GPL 3.0 License. See the LICENSE file for details.
+- Contact:
+    If you have any questions or suggestions, feel free to reach out:
+    GitHub: https://github.com/triquetra003

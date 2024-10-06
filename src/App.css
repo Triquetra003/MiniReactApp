@@ -1,16 +1,10 @@
-.App {
+h1{
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  text-shadow: 0px 0px 5px hsl(42, 100%, 87%);
+  font-weight: lighter;
+ font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman';
+ background-color: "#1565c0";
+ color:white;
 }
 
 .App-header {
@@ -28,11 +22,114 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#home_pg_td{
+  width:50vw;
+  border: 2px solid black;
+  padding:3%;
+  border-spacing:10px;
 }
+
+#trivia-page{
+  width:60%;
+  margin-left:20%;
+}
+
+#trivia-page>h1{
+  margin-left: 0;
+}
+
+#grp-ques{
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+
+#trivia-options{
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-left: 5%;
+  margin-right:5%;
+  margin-bottom:2%;
+  padding:2%;
+  color:black;
+  text-align: left;
+}
+
+#trivia-options:hover{
+  background-color: #bbc2d2;
+}
+.trivia_answer_selected{
+  background-color: #bbc2d2;
+}
+
+#timer-component{
+  background-color: #61dafb;
+  color:black;
+  border-radius: 5%;
+  width:fit-content;
+  float: right;
+  padding:1%;
+}
+
+#title{
+  text-align: center;
+}
+
+.to-do-list-input{
+  border:1px solid rgb(71, 51, 6);
+  border-radius: 10px;
+  color:black;
+  text-align: left;
+  padding:1%;
+  width:60%;
+  margin-left:5%;
+}
+
+.strike{
+  text-decoration: line-through;
+  background-color: #bbc2d2;
+}
+
+.task-input{
+border: 1px solid black;
+border-radius:5px;
+padding:5px;
+font-size:1em;
+margin-right:2%;
+}
+
+#task-completed-count{
+  font-size: 1em;
+  background-color:rgba(33, 15, 1, 0.548);
+  color:white;
+  width:40%;
+  margin-left:30%;
+  border-radius:5px;
+}
+
+#tasks-completed{
+  font-size: 1em;
+  background-color:rgba(22, 80, 47, 0.548);
+  color:white;
+  width:40%;
+  margin-left:30%;
+  border-radius:5px;
+}
+
+.navbar-links-div>*{
+color:white;
+text-decoration: none;
+font-size: 1.5em;
+}
+
+.navbar-links-div>*:hover{
+  color:#ffff00;
+  text-decoration:underline;
+}
+
+.navbar-links-div>*{
+  margin-right: 2vw;
+}
+
