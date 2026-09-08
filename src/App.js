@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import TriviaPage from './Pages/TriviaPage';
 import ToDoList from './Pages/ToDoList';
@@ -17,7 +16,6 @@ function App() {
           <Route path="/to-do-list" element={<ToDoList/>}/>
           </Route>
       </Routes>
-
     </HashRouter>
   );
 }

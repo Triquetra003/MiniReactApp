@@ -25,7 +25,7 @@ function TriviaPage(){
         if(time<0||gameOver){
             return;
         }
-        if(time==0){
+        if(time===0){
             console.log(time)
             setGameOver(true)
             nextQuestion()
@@ -48,7 +48,7 @@ function TriviaPage(){
         options.map((e)=>{
             e.current.style.background=''
             e.current.style.border=''
-           
+            return 0;
         })
 
         // increment index to display next question in data array and its options or else end trivia 
@@ -61,13 +61,14 @@ function TriviaPage(){
 
         // check if next question has already been attempted: if attempted, disable selection of new option and display cuurent questions' answer 
         attempted.map((id)=>{
-            if(id==index+1){
+            if(id===index+1){
                 if(click){
                     newClick(false)
                 }
                 options[data[index+1].answer-1].current.style.backgroundColor='rgba(65, 105, 225, 0.447)';
                 options[data[index+1].answer-1].current.style.border='1px solid rgb(0, 0, 0)';
             }
+            return 0;
         })
 
     }
@@ -75,7 +76,7 @@ function TriviaPage(){
     // previous button on click
     const prevQuestion=()=>{
         // disable button on 0th index
-        if(index==0){
+        if(index===0){
             return;
         }
 
@@ -83,19 +84,21 @@ function TriviaPage(){
         options.map((e)=>{
             e.current.style.background=''
             e.current.style.border=''
+            return 0;
         })
         //decrement index
         newIndex(index-1)
 
         // check whether previous question has already been attempted
         attempted.map((e)=>{
-            if(e==index-1){
+            if(e===index-1){
                 if(click){
                     newClick(false)
                 }
                 options[data[index-1].answer-1].current.style.backgroundColor='rgba(65, 105, 225, 0.447)';
                 options[data[index-1].answer-1].current.style.border='1px solid rgb(0, 0, 0)';
             }
+            return 0;
         })
     }
 
@@ -108,9 +111,10 @@ function TriviaPage(){
         // check whether the selected question has already been attempted
         options.map((e)=>{
             let color=e.current.style.backgroundColor
-            if(color=='rgba(65, 105, 225, 0.447)'){
-                return;
+            if(color==='rgba(65, 105, 225, 0.447)'){
+                return 0;
             }
+            return 0;
         })
 
         // disable selecting another option in the same question
@@ -121,8 +125,8 @@ function TriviaPage(){
         setAttempted(addToAttempted);
 
         // display whether answer was correct or wrong, if wrong then display correct answer as well
-        if(click==true){
-            if (data[index].answer==ans){
+        if(click===true){
+            if (data[index].answer===ans){
                 console.log("correct")
                 e.target.style.backgroundColor='rgba(19, 190, 113, 0.447)';
                 e.target.style.border=' 1px solid rgb(101, 42, 6)';
@@ -185,9 +189,9 @@ function TriviaPage(){
 
             <center>
 
-            {index!=0?<button onClick={prevQuestion} id='trivia-button' className="btn btn-success" style={{marginRight:"5%"}}>Prev</button>:""}
+            {index!==0?<button onClick={prevQuestion} id='trivia-button' className="btn btn-success" style={{marginRight:"5%"}}>Prev</button>:""}
 
-            {index+1==data.length?
+            {index+1===data.length?
             <button onClick={nextQuestion} id='trivia-button' className="btn btn-danger" style={{marginRight:"5%"}}>Submit</button>:
             <button onClick={nextQuestion} id='trivia-button' className="btn btn-success" style={{marginRight:"5%"}}>Next</button>}
             

@@ -14,7 +14,7 @@ const ToDoList=()=>{
         newInput(e.target.value);
 
         // character length constraint
-        if(e.target.value.length==e.target.maxLength){
+        if(e.target.value.length===e.target.maxLength){
             alert("Maximum character length reached...")
         }
         
@@ -24,7 +24,7 @@ const ToDoList=()=>{
     const addList=()=>{
 
         // valid input condition
-        if(input=="" & popup){
+        if(input==="" && popup){
             alert("Please enter a list name.")
             newPopup(false)
             return;

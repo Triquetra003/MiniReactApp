@@ -24,7 +24,7 @@ function EditList(props) {
 
   // date display 
       const date=new Date();
-      let year=date.getFullYear();
+      // let year=date.getFullYear();
       let month=date.getMonth();
       let day=date.getDay();
       let dated=date.getDate();
@@ -52,11 +52,12 @@ function EditList(props) {
     }
     // avoid duplication of list names/titles
      list.map((e)=>{
-      if(e.title==listTitle){
+      if(e.title===listTitle){
         alert("You already have a List with that name...")
         duplicateTitle=true;
-        return;
+        return 0;
       }
+      return 0;
      })
      // reveal modal
      if(!duplicateTitle){
@@ -67,7 +68,7 @@ function EditList(props) {
   // save task list into To Do List
   const handleSave = () =>{
     // check whether any task exists
-    if(todos.length==0){
+    if(todos.length===0){
       alert("You have no tasks to save... Please enter a task")
       return
     }
@@ -81,26 +82,26 @@ function EditList(props) {
         }
 
         // set day of week 
-        if(day==0){day='Sun'}
-       else  if(day==1){day='Mon'}
-       else  if(day==2){day='Tue'}
-       else  if(day==3){day='Wed'}
-       else  if(day==4){day='Thu'}
-       else  if(day==5){day='Fri'}
-       else  if(day==6){day='Sat'}
+        if(day===0){day='Sun'}
+       else  if(day===1){day='Mon'}
+       else  if(day===2){day='Tue'}
+       else  if(day===3){day='Wed'}
+       else  if(day===4){day='Thu'}
+       else  if(day===5){day='Fri'}
+       else  if(day===6){day='Sat'}
 
-             if(month==0){month='Jan'}
-        else if(month==1){month='Feb'}
-        else if(month==2){month='Mar'}
-        else if(month==3){month='Apr'}
-        else if(month==4){month='May'}
-        else if(month==5){month='Jun'}
-        else if(month==6){month='Jul'}
-        else if(month==7){month='Aug'}
-        else if(month==8){month='Sep'}
-        else if(month==9){month='Oct'}
-        else if(month==10){month='Nov'}
-        else if(month==11){month='Dec'}
+             if(month===0){month='Jan'}
+        else if(month===1){month='Feb'}
+        else if(month===2){month='Mar'}
+        else if(month===3){month='Apr'}
+        else if(month===4){month='May'}
+        else if(month===5){month='Jun'}
+        else if(month===6){month='Jul'}
+        else if(month===7){month='Aug'}
+        else if(month===8){month='Sep'}
+        else if(month===9){month='Oct'}
+        else if(month===10){month='Nov'}
+        else if(month===11){month='Dec'}
 
     const dateTime=<>{day} {dated} {month} at {hour-12}:{mins}:{seconds} {midday}</>
 
@@ -127,7 +128,7 @@ function EditList(props) {
   const changeTaskInput=(e)=>{
     newInput(e.target.value);
     // set character length constraint
-    if(e.target.value.length==e.target.maxLength){
+    if(e.target.value.length===e.target.maxLength){
       alert("Maximum character length reached...")
   }
   }
@@ -135,7 +136,7 @@ function EditList(props) {
   // add task to task list
   const addTask=()=>{
     // valid input constraint
-    if(input==""){
+    if(input===""){
       alert("Please Enter a Task")
       return
     }
@@ -165,7 +166,7 @@ function EditList(props) {
   // delete task from task list
   const deleteTask=(i)=>{
     // filter out the task with same id/key as that of the element clicked (i parameter passed here contains the key value)
-    setTodos(todos.filter((e)=>e.id!=i))
+    setTodos(todos.filter((e)=>e.id!==i))
     return;
   }
 
@@ -187,9 +188,11 @@ function EditList(props) {
 
             // set key="completed" in todos array object 
             todos.map((e)=>{
-              if(e.id==checkId){
+              if(e.id===checkId){
                 e.completed=!e.completed
+                return 0;
               }
+              return 0;
             })
   }
 
@@ -201,7 +204,7 @@ function EditList(props) {
 
   // delete List from main to-do-list page
   function deleteList(title){
-    newList(list.filter((e)=>e.title!=title))
+    newList(list.filter((e)=>e.title!==title))
     return;
   }
   
